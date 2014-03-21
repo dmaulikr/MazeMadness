@@ -15,16 +15,23 @@
 // Initializes with a specific dimensions
 -(id)initWithRows:(NSInteger)rows andColumns:(NSInteger)columns;
 
+// Get all neighbors for this cell, can go through walls
 -(NSArray*)getNeighborsForCell:(MMCoreMazeCell*)node;
 
+// Get neighbors for this cell which don't have a wall in between
+-(NSArray*)getNeighborAccessibleForCell:(MMCoreMazeCell*)node;
+
+// Cell for particular row
 -(MMCoreMazeCell*) getCellForRow:(NSInteger)row andColumn:(NSInteger)column;
+
+// All cells
+-(NSArray*)getAllCells;
+
+// Get furthest point from the start of the maze (0,0)
+-(MMCoreMazeCell*)getEndPointCell;
 
 @property (readonly) NSInteger rows;
 @property (readonly) NSInteger columns;
-
--(NSArray*)getAllCells;
-
--(MMCoreMazeCell*)getEndPointCell;
 
 @end
 
