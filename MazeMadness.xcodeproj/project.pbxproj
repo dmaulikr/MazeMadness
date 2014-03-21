@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D9F38D418DBDF6500AD839A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D318DBDF6500AD839A /* Foundation.framework */; };
+		1D9F38D618DBDF6500AD839A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */; };
+		1D9F38D818DBDF6500AD839A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D718DBDF6500AD839A /* UIKit.framework */; };
+		1D9F38DA18DBDF6500AD839A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D918DBDF6500AD839A /* SpriteKit.framework */; };
+		1D9F38E018DBDF6500AD839A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D9F38DE18DBDF6500AD839A /* InfoPlist.strings */; };
+		1D9F38E218DBDF6500AD839A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F38E118DBDF6500AD839A /* main.m */; };
+		1D9F38E618DBDF6500AD839A /* MMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F38E518DBDF6500AD839A /* MMAppDelegate.m */; };
+		1D9F38E918DBDF6500AD839A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D9F38E718DBDF6500AD839A /* Main.storyboard */; };
+		1D9F38EC18DBDF6500AD839A /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F38EB18DBDF6500AD839A /* MMViewController.m */; };
+		1D9F38EF18DBDF6500AD839A /* MMMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F38EE18DBDF6500AD839A /* MMMyScene.m */; };
+		1D9F38F118DBDF6500AD839A /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9F38F018DBDF6500AD839A /* Spaceship.png */; };
+		1D9F38F318DBDF6500AD839A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D9F38F218DBDF6500AD839A /* Images.xcassets */; };
+		1D9F38FA18DBDF6500AD839A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38F918DBDF6500AD839A /* XCTest.framework */; };
+		1D9F38FB18DBDF6500AD839A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D318DBDF6500AD839A /* Foundation.framework */; };
+		1D9F38FC18DBDF6500AD839A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D718DBDF6500AD839A /* UIKit.framework */; };
+		1D9F390418DBDF6500AD839A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D9F390218DBDF6500AD839A /* InfoPlist.strings */; };
+		1D9F390618DBDF6500AD839A /* MazeMadnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F390518DBDF6500AD839A /* MazeMadnessTests.m */; };
+		1D9F391118DBE8B900AD839A /* MMCoreMaze.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F391018DBE8B900AD839A /* MMCoreMaze.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D9F38FD18DBDF6500AD839A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D9F38C818DBDF6500AD839A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D9F38CF18DBDF6500AD839A;
+			remoteInfo = MazeMadness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D9F38D018DBDF6500AD839A /* MazeMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9F38D318DBDF6500AD839A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D9F38D718DBDF6500AD839A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1D9F38D918DBDF6500AD839A /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		1D9F38DD18DBDF6500AD839A /* MazeMadness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeMadness-Info.plist"; sourceTree = "<group>"; };
+		1D9F38DF18DBDF6500AD839A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D9F38E118DBDF6500AD839A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D9F38E318DBDF6500AD839A /* MazeMadness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MazeMadness-Prefix.pch"; sourceTree = "<group>"; };
+		1D9F38E418DBDF6500AD839A /* MMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAppDelegate.h; sourceTree = "<group>"; };
+		1D9F38E518DBDF6500AD839A /* MMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAppDelegate.m; sourceTree = "<group>"; };
+		1D9F38E818DBDF6500AD839A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D9F38EA18DBDF6500AD839A /* MMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
+		1D9F38EB18DBDF6500AD839A /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
+		1D9F38ED18DBDF6500AD839A /* MMMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMMyScene.h; sourceTree = "<group>"; };
+		1D9F38EE18DBDF6500AD839A /* MMMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMMyScene.m; sourceTree = "<group>"; };
+		1D9F38F018DBDF6500AD839A /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		1D9F38F218DBDF6500AD839A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1D9F38F818DBDF6500AD839A /* MazeMadnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeMadnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9F38F918DBDF6500AD839A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1D9F390118DBDF6500AD839A /* MazeMadnessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeMadnessTests-Info.plist"; sourceTree = "<group>"; };
+		1D9F390318DBDF6500AD839A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D9F390518DBDF6500AD839A /* MazeMadnessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeMadnessTests.m; sourceTree = "<group>"; };
+		1D9F390F18DBE8B900AD839A /* MMCoreMaze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCoreMaze.h; sourceTree = "<group>"; };
+		1D9F391018DBE8B900AD839A /* MMCoreMaze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCoreMaze.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D9F38CD18DBDF6500AD839A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9F38D618DBDF6500AD839A /* CoreGraphics.framework in Frameworks */,
+				1D9F38D818DBDF6500AD839A /* UIKit.framework in Frameworks */,
+				1D9F38DA18DBDF6500AD839A /* SpriteKit.framework in Frameworks */,
+				1D9F38D418DBDF6500AD839A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D9F38F518DBDF6500AD839A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9F38FA18DBDF6500AD839A /* XCTest.framework in Frameworks */,
+				1D9F38FC18DBDF6500AD839A /* UIKit.framework in Frameworks */,
+				1D9F38FB18DBDF6500AD839A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D9F38C718DBDF6500AD839A = {
+			isa = PBXGroup;
+			children = (
+				1D9F38DB18DBDF6500AD839A /* MazeMadness */,
+				1D9F38FF18DBDF6500AD839A /* MazeMadnessTests */,
+				1D9F38D218DBDF6500AD839A /* Frameworks */,
+				1D9F38D118DBDF6500AD839A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D9F38D118DBDF6500AD839A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F38D018DBDF6500AD839A /* MazeMadness.app */,
+				1D9F38F818DBDF6500AD839A /* MazeMadnessTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D9F38D218DBDF6500AD839A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F38D318DBDF6500AD839A /* Foundation.framework */,
+				1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */,
+				1D9F38D718DBDF6500AD839A /* UIKit.framework */,
+				1D9F38D918DBDF6500AD839A /* SpriteKit.framework */,
+				1D9F38F918DBDF6500AD839A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D9F38DB18DBDF6500AD839A /* MazeMadness */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F38E418DBDF6500AD839A /* MMAppDelegate.h */,
+				1D9F38E518DBDF6500AD839A /* MMAppDelegate.m */,
+				1D9F38E718DBDF6500AD839A /* Main.storyboard */,
+				1D9F38EA18DBDF6500AD839A /* MMViewController.h */,
+				1D9F38EB18DBDF6500AD839A /* MMViewController.m */,
+				1D9F38ED18DBDF6500AD839A /* MMMyScene.h */,
+				1D9F38EE18DBDF6500AD839A /* MMMyScene.m */,
+				1D9F390F18DBE8B900AD839A /* MMCoreMaze.h */,
+				1D9F391018DBE8B900AD839A /* MMCoreMaze.m */,
+				1D9F38F018DBDF6500AD839A /* Spaceship.png */,
+				1D9F38F218DBDF6500AD839A /* Images.xcassets */,
+				1D9F38DC18DBDF6500AD839A /* Supporting Files */,
+			);
+			path = MazeMadness;
+			sourceTree = "<group>";
+		};
+		1D9F38DC18DBDF6500AD839A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F38DD18DBDF6500AD839A /* MazeMadness-Info.plist */,
+				1D9F38DE18DBDF6500AD839A /* InfoPlist.strings */,
+				1D9F38E118DBDF6500AD839A /* main.m */,
+				1D9F38E318DBDF6500AD839A /* MazeMadness-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D9F38FF18DBDF6500AD839A /* MazeMadnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F390518DBDF6500AD839A /* MazeMadnessTests.m */,
+				1D9F390018DBDF6500AD839A /* Supporting Files */,
+			);
+			path = MazeMadnessTests;
+			sourceTree = "<group>";
+		};
+		1D9F390018DBDF6500AD839A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F390118DBDF6500AD839A /* MazeMadnessTests-Info.plist */,
+				1D9F390218DBDF6500AD839A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D9F38CF18DBDF6500AD839A /* MazeMadness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D9F390918DBDF6500AD839A /* Build configuration list for PBXNativeTarget "MazeMadness" */;
+			buildPhases = (
+				1D9F38CC18DBDF6500AD839A /* Sources */,
+				1D9F38CD18DBDF6500AD839A /* Frameworks */,
+				1D9F38CE18DBDF6500AD839A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MazeMadness;
+			productName = MazeMadness;
+			productReference = 1D9F38D018DBDF6500AD839A /* MazeMadness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D9F38F718DBDF6500AD839A /* MazeMadnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D9F390C18DBDF6500AD839A /* Build configuration list for PBXNativeTarget "MazeMadnessTests" */;
+			buildPhases = (
+				1D9F38F418DBDF6500AD839A /* Sources */,
+				1D9F38F518DBDF6500AD839A /* Frameworks */,
+				1D9F38F618DBDF6500AD839A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D9F38FE18DBDF6500AD839A /* PBXTargetDependency */,
+			);
+			name = MazeMadnessTests;
+			productName = MazeMadnessTests;
+			productReference = 1D9F38F818DBDF6500AD839A /* MazeMadnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D9F38C818DBDF6500AD839A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "David Xiang";
+				TargetAttributes = {
+					1D9F38F718DBDF6500AD839A = {
+						TestTargetID = 1D9F38CF18DBDF6500AD839A;
+					};
+				};
+			};
+			buildConfigurationList = 1D9F38CB18DBDF6500AD839A /* Build configuration list for PBXProject "MazeMadness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D9F38C718DBDF6500AD839A;
+			productRefGroup = 1D9F38D118DBDF6500AD839A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D9F38CF18DBDF6500AD839A /* MazeMadness */,
+				1D9F38F718DBDF6500AD839A /* MazeMadnessTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D9F38CE18DBDF6500AD839A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9F38E018DBDF6500AD839A /* InfoPlist.strings in Resources */,
+				1D9F38F318DBDF6500AD839A /* Images.xcassets in Resources */,
+				1D9F38F118DBDF6500AD839A /* Spaceship.png in Resources */,
+				1D9F38E918DBDF6500AD839A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D9F38F618DBDF6500AD839A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9F390418DBDF6500AD839A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D9F38CC18DBDF6500AD839A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9F38EF18DBDF6500AD839A /* MMMyScene.m in Sources */,
+				1D9F38E618DBDF6500AD839A /* MMAppDelegate.m in Sources */,
+				1D9F391118DBE8B900AD839A /* MMCoreMaze.m in Sources */,
+				1D9F38EC18DBDF6500AD839A /* MMViewController.m in Sources */,
+				1D9F38E218DBDF6500AD839A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D9F38F418DBDF6500AD839A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9F390618DBDF6500AD839A /* MazeMadnessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D9F38FE18DBDF6500AD839A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D9F38CF18DBDF6500AD839A /* MazeMadness */;
+			targetProxy = 1D9F38FD18DBDF6500AD839A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D9F38DE18DBDF6500AD839A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D9F38DF18DBDF6500AD839A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D9F38E718DBDF6500AD839A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D9F38E818DBDF6500AD839A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D9F390218DBDF6500AD839A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D9F390318DBDF6500AD839A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D9F390718DBDF6500AD839A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D9F390818DBDF6500AD839A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D9F390A18DBDF6500AD839A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeMadness/MazeMadness-Prefix.pch";
+				INFOPLIST_FILE = "MazeMadness/MazeMadness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D9F390B18DBDF6500AD839A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeMadness/MazeMadness-Prefix.pch";
+				INFOPLIST_FILE = "MazeMadness/MazeMadness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1D9F390D18DBDF6500AD839A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MazeMadness.app/MazeMadness";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeMadness/MazeMadness-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MazeMadnessTests/MazeMadnessTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1D9F390E18DBDF6500AD839A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MazeMadness.app/MazeMadness";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeMadness/MazeMadness-Prefix.pch";
+				INFOPLIST_FILE = "MazeMadnessTests/MazeMadnessTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D9F38CB18DBDF6500AD839A /* Build configuration list for PBXProject "MazeMadness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D9F390718DBDF6500AD839A /* Debug */,
+				1D9F390818DBDF6500AD839A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D9F390918DBDF6500AD839A /* Build configuration list for PBXNativeTarget "MazeMadness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D9F390A18DBDF6500AD839A /* Debug */,
+				1D9F390B18DBDF6500AD839A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D9F390C18DBDF6500AD839A /* Build configuration list for PBXNativeTarget "MazeMadnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D9F390D18DBDF6500AD839A /* Debug */,
+				1D9F390E18DBDF6500AD839A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D9F38C818DBDF6500AD839A /* Project object */;
+}
