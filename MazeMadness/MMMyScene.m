@@ -9,6 +9,7 @@
 #import "MMMyScene.h"
 #import "MMGameOverScene.h"
 #import "MMCoreMaze.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 static const CGFloat MMMySceneCellSize = 35;
 static const CGFloat MMMySceneMarkerSize = 15;
@@ -29,6 +30,7 @@ static const CGFloat MMMySceneMarginVertical = 20;
 @property SKLabelNode *scoreLabel;
 @property NSTimeInterval updateInterval;
 @property NSInteger score;
+@property BOOL playedWarningSound;
 @end
 
 @implementation MMMyScene
@@ -48,6 +50,7 @@ static const CGFloat MMMySceneMarginVertical = 20;
         NSInteger numRows = ((self.size.height - 2*MMMySceneMarginVertical) / MMMySceneCellSize);
         
         _maze = [[MMCoreMaze alloc]initWithRows:numRows andColumns:numCols];
+        _playedWarningSound = NO;
        
         [self initMazeInScene];
         
@@ -66,6 +69,12 @@ static const CGFloat MMMySceneMarginVertical = 20;
         
         // Init count down
         _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        
+        // Play win sound
+        if(score> 0){
+            [self runAction:[SKAction playSoundFileNamed:@"levelclear.caf" waitForCompletion:YES]];
+        }
+        _score = score;
         _scoreLabel.text = [NSString stringWithFormat:@"Levels Completed: %ld", (long)score];
         _scoreLabel.fontSize = 14;
         _scoreLabel.alpha = 1;
@@ -73,6 +82,15 @@ static const CGFloat MMMySceneMarginVertical = 20;
         [self addChild:_scoreLabel];
     }
     return self;
+}
+
+-(void) playSound {
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"caf"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain([NSURL fileURLWithPath: soundPath]), &soundID);
+    AudioServicesPlaySystemSound (soundID);
+    //[soundPath release];
+    // NSLog(@"soundpath retain count: %d", [soundPath retainCount]);
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -95,11 +113,15 @@ static const CGFloat MMMySceneMarginVertical = 20;
         
         if(self.timeLeft <= 0 ){
             //game over
-            SKScene * gameover = [[MMGameOverScene alloc]initWithSize:self.view.bounds.size];
+            SKScene * gameover = [[MMGameOverScene alloc]initWithSize:self.view.bounds.size finalScore:self.score];
             gameover.scaleMode = SKSceneScaleModeAspectFill;
             [self.view presentScene:gameover];
-        }else if(self.timeLeft <= 4){
+        }else if(self.timeLeft <= 6){
             self.timeLeftLabel.fontColor = [UIColor redColor];
+            if(!self.playedWarningSound){
+                [self runAction:[SKAction playSoundFileNamed:@"smb_warning.caf" waitForCompletion:NO]];
+                self.playedWarningSound = YES;
+            }
         }
         
         self.timeLeftLabel.text = [NSString stringWithFormat:@"%.2f", self.timeLeft];
@@ -141,6 +163,11 @@ static const CGFloat MMMySceneMarginVertical = 20;
                 
                 // Update the new current cell
                 [self updateCurrentCellAtRow:cellUnderTouch.row andColumn:cellUnderTouch.column];
+                
+                // Play update sound
+                //[self runAction:[SKAction playSoundFileNamed:@"beep.caf" waitForCompletion:YES]];
+                [self playSound];
+                
                 if(![self isMarkerShowing:newCurrentCell.row andColumn:newCurrentCell.column]){
                     [self showMarkerAtRow:newCurrentCell.row andColumn:newCurrentCell.column];
                 } else{
@@ -149,8 +176,7 @@ static const CGFloat MMMySceneMarginVertical = 20;
                 
                 // Win
                 if([newCurrentCell isEqual:self.endCell]){
-                    
-                    // Play win sound
+                   
                     
                     SKScene * mainGameScene = [[MMMyScene alloc]initWithSize:self.view.bounds.size andTimeLimit:self.maxTime * .95 score:self.score + 1];
                     mainGameScene.scaleMode = SKSceneScaleModeAspectFill;

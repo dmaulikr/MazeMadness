@@ -10,4 +10,5 @@
 
 @interface MMGameOverScene : SKScene
 
+-(id)initWithSize:(CGSize)size finalScore:(NSInteger) score;
 @end

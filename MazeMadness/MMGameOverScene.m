@@ -10,10 +10,11 @@
 #import "MMMyScene.h"
 
 @implementation MMGameOverScene
--(id)initWithSize:(CGSize)size {
+-(id)initWithSize:(CGSize)size finalScore:(NSInteger) score{
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        [self runAction:[SKAction playSoundFileNamed:@"smb_gameover.caf" waitForCompletion:YES]];
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
@@ -27,7 +28,7 @@
         
         
         SKLabelNode *prompt = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
-        prompt.text = [NSString stringWithFormat:@"Score: 0"];
+        prompt.text = [NSString stringWithFormat:@"Score: %d", score];
         prompt.fontSize = 20;
         prompt.position = CGPointMake(CGRectGetMidX(self.frame),
                                       CGRectGetMidY(self.frame) + 22);
@@ -42,6 +43,7 @@
     }
     return self;
 }
+
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1D03E6C318DDDACF00D2F0DE /* MMWelcomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03E6C218DDDACF00D2F0DE /* MMWelcomeScreen.m */; };
 		1D03E6C618DE228100D2F0DE /* MMGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03E6C518DE228100D2F0DE /* MMGameOverScene.m */; };
+		1D03E6D018DE2C0100D2F0DE /* smb_warning.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1D03E6CE18DE2C0100D2F0DE /* smb_warning.caf */; };
+		1D03E6D118DE2C0100D2F0DE /* smb_gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1D03E6CF18DE2C0100D2F0DE /* smb_gameover.caf */; };
+		1D03E6D318DE2F9C00D2F0DE /* beep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1D03E6D218DE2F9C00D2F0DE /* beep.caf */; };
+		1D03E6D518DE30B700D2F0DE /* levelclear.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1D03E6D418DE30B700D2F0DE /* levelclear.caf */; };
+		1D03E6D718DE332500D2F0DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */; };
 		1D9F38D418DBDF6500AD839A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D318DBDF6500AD839A /* Foundation.framework */; };
 		1D9F38D618DBDF6500AD839A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */; };
 		1D9F38D818DBDF6500AD839A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D718DBDF6500AD839A /* UIKit.framework */; };
@@ -44,6 +49,11 @@
 		1D03E6C218DDDACF00D2F0DE /* MMWelcomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWelcomeScreen.m; sourceTree = "<group>"; };
 		1D03E6C418DE228100D2F0DE /* MMGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMGameOverScene.h; sourceTree = "<group>"; };
 		1D03E6C518DE228100D2F0DE /* MMGameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGameOverScene.m; sourceTree = "<group>"; };
+		1D03E6CE18DE2C0100D2F0DE /* smb_warning.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = smb_warning.caf; sourceTree = "<group>"; };
+		1D03E6CF18DE2C0100D2F0DE /* smb_gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = smb_gameover.caf; sourceTree = "<group>"; };
+		1D03E6D218DE2F9C00D2F0DE /* beep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.caf; sourceTree = "<group>"; };
+		1D03E6D418DE30B700D2F0DE /* levelclear.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = levelclear.caf; sourceTree = "<group>"; };
+		1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1D9F38D018DBDF6500AD839A /* MazeMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9F38D318DBDF6500AD839A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D03E6D718DE332500D2F0DE /* AudioToolbox.framework in Frameworks */,
 				1D9F38D618DBDF6500AD839A /* CoreGraphics.framework in Frameworks */,
 				1D9F38D818DBDF6500AD839A /* UIKit.framework in Frameworks */,
 				1D9F38DA18DBDF6500AD839A /* SpriteKit.framework in Frameworks */,
@@ -96,9 +107,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D03E6C718DE26E600D2F0DE /* Game Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1D03E6CE18DE2C0100D2F0DE /* smb_warning.caf */,
+				1D03E6CF18DE2C0100D2F0DE /* smb_gameover.caf */,
+				1D03E6D218DE2F9C00D2F0DE /* beep.caf */,
+				1D03E6D418DE30B700D2F0DE /* levelclear.caf */,
+			);
+			name = "Game Sounds";
+			sourceTree = "<group>";
+		};
 		1D9F38C718DBDF6500AD839A = {
 			isa = PBXGroup;
 			children = (
+				1D03E6C718DE26E600D2F0DE /* Game Sounds */,
 				1D9F38DB18DBDF6500AD839A /* MazeMadness */,
 				1D9F38FF18DBDF6500AD839A /* MazeMadnessTests */,
 				1D9F38D218DBDF6500AD839A /* Frameworks */,
@@ -118,6 +141,7 @@
 		1D9F38D218DBDF6500AD839A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */,
 				1D9F38D318DBDF6500AD839A /* Foundation.framework */,
 				1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */,
 				1D9F38D718DBDF6500AD839A /* UIKit.framework */,
@@ -256,10 +280,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D03E6D018DE2C0100D2F0DE /* smb_warning.caf in Resources */,
 				1D9F38E018DBDF6500AD839A /* InfoPlist.strings in Resources */,
 				1D9F38F318DBDF6500AD839A /* Images.xcassets in Resources */,
 				1D9F38F118DBDF6500AD839A /* Spaceship.png in Resources */,
+				1D03E6D318DE2F9C00D2F0DE /* beep.caf in Resources */,
+				1D03E6D518DE30B700D2F0DE /* levelclear.caf in Resources */,
 				1D9F38E918DBDF6500AD839A /* Main.storyboard in Resources */,
+				1D03E6D118DE2C0100D2F0DE /* smb_gameover.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
