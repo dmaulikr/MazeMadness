@@ -44,6 +44,10 @@
     
     NSLog(@"all cells %@", [maze getAllCells]);
     
+    NSArray *accessible = [maze getNeighborAccessibleForCell:[maze getCellForRow:0 andColumn:0]];
+    
+    NSLog(@"accsssible %@", accessible);
+    
 }
 
 @end

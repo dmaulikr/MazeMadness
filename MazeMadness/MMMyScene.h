@@ -10,4 +10,5 @@
 
 @interface MMMyScene : SKScene
 
+-(id)initWithSize:(CGSize)size andTimeLimit:(NSTimeInterval)time score:(NSInteger) score;
 @end

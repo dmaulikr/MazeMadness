@@ -21,6 +21,9 @@
 // Get neighbors for this cell which don't have a wall in between
 -(NSArray*)getNeighborAccessibleForCell:(MMCoreMazeCell*)node;
 
+// Is cell2 accessible from cell
+-(BOOL)isAccessible:(MMCoreMazeCell*)cell andNeighbor:(MMCoreMazeCell*)cell2;
+
 // Cell for particular row
 -(MMCoreMazeCell*) getCellForRow:(NSInteger)row andColumn:(NSInteger)column;
 

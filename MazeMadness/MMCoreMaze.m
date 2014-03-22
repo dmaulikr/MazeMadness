@@ -10,7 +10,6 @@
 
 @interface MMCoreMaze ()
 @property NSMutableArray *cells;
-@property NSMutableArray *visited;
 @property NSMutableArray *adjacenyList;
 @end
 
@@ -38,14 +37,6 @@
         }
     }
     
-    // Initialize visited
-    //self.visited = [NSMutableArray arrayWithCapacity:numElements];
-    //for(int i = 0; i < _rows; ++i){
-    //    for(int j = 0; j < _columns; ++j){
-    //        [self.visited addObject:@NO];
-    //    }
-    // }
-    
     // Initialize adjaceny list
     self.adjacenyList = [NSMutableArray arrayWithCapacity:numElements];
     for(int i = 0; i < _rows; ++i){
@@ -58,8 +49,6 @@
     // Initialize the maze
     [self initializeCoreMaze];
     
-    
-    
     return self;
 }
 -(NSArray*)getNeighborsForCell:(MMCoreMazeCell*)node
@@ -69,6 +58,19 @@
     }else{
         return nil;
     }
+}
+
+-(NSArray*)getNeighborAccessibleForCell:(MMCoreMazeCell*)node
+{
+    NSArray * allNeighbors = [self getNeighborsForCell:node];
+    NSMutableArray * accessibleNeighbors = [NSMutableArray array];
+    for(MMCoreMazeCell * cell in allNeighbors){
+        if([self isAccessible:node andNeighbor:cell ]){
+            [accessibleNeighbors addObject:cell];
+        }
+    }
+    
+    return accessibleNeighbors;
 }
 
 -(NSArray*)getAllCells
@@ -91,6 +93,32 @@
 }
 
 #pragma mark - Private
+
+-(BOOL)isAccessible:(MMCoreMazeCell*)cell andNeighbor:(MMCoreMazeCell*)cell2
+{
+    // If cell is left of cell 2
+    if(cell.column == cell2.column - 1){
+        return cell.hasRightWall == NO && cell2.hasLeftWall == NO;
+    }
+    
+    // If cell is right of cell 2
+    else if(cell.column == cell2.column + 1){
+        return cell.hasLeftWall == NO && cell2.hasRightWall == NO;
+    }
+    
+    // If cell is top of cell 2
+    else if(cell.row == cell2.row - 1){
+        return cell.hasBottomWall == NO && cell2.hasTopWall == NO;
+    }
+    
+    // If cell is bottom of cell 2
+    else if(cell.row == cell2.row + 1){
+        return cell.hasTopWall == NO && cell2.hasBottomWall == NO;
+    }
+    
+    return NO;
+}
+
 -(void)knockDownWall:(MMCoreMazeCell*)cell andNeighbor:(MMCoreMazeCell*)cell2
 {
     
@@ -167,22 +195,18 @@
     NSMutableArray *neighbors = [NSMutableArray array];
     
     if(column - 1 >= 0){
-        // [neighbors addObject:[self getCellForRow:row*self.rows + column -1]];
         [neighbors addObject:[self getCellForRow:row andColumn:column - 1]];
     }
     
     if(column + 1 < self.columns){
-        //[neighbors addObject:self.cells[row*self.rows + column+1]];
         [neighbors addObject:[self getCellForRow:row andColumn:column + 1]];
     }
     
     if(row - 1 >= 0){
-        //[neighbors addObject:self.cells[(row-1)*self.rows + column]];
         [neighbors addObject:[self getCellForRow:row - 1 andColumn:column]];
     }
     
     if(row + 1 < self.rows){
-        //[neighbors addObject:self.cells[(row+1)*self.rows + column]];
         [neighbors addObject:[self getCellForRow:row + 1 andColumn:column]];
     }
     return neighbors;
@@ -195,7 +219,7 @@
 
 -(NSString*)description{
     return [NSString stringWithFormat:@"Cell at [%ld,%ld] with LW:%d RW:%d TW:%d BW:%d",
-           self.row, self.column, self.hasLeftWall, self.hasRightWall, self.hasTopWall, self.hasBottomWall];
+           (long)self.row, (long)self.column, self.hasLeftWall, self.hasRightWall, self.hasTopWall, self.hasBottomWall];
 }
 
 
