@@ -10,11 +10,12 @@
 #import "MMGameOverScene.h"
 #import "MMCoreMaze.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import <iAd/iAd.h>
 
 static const CGFloat MMMySceneCellSize = 35;
 static const CGFloat MMMySceneMarkerSize = 15;
-static const CGFloat MMMySceneMarginHorizontal = 21.5;
-static const CGFloat MMMySceneMarginVertical = 20;
+static const CGFloat MMMySceneMarginHorizontal = 2.5;
+static const CGFloat MMMySceneMarginVertical = 56.35;
 
 @interface MMMyScene()
 @property MMCoreMaze * maze;
@@ -43,16 +44,18 @@ static const CGFloat MMMySceneMarginVertical = 20;
         
         // Scene anchor is set up in the top left to make maze layout correspond more closely to row
         // major ordering
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         self.anchorPoint = CGPointMake(0,1);
+        
+        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
         NSInteger numCols = ((self.size.width - 2*MMMySceneMarginHorizontal) / MMMySceneCellSize);
         NSInteger numRows = ((self.size.height - 2*MMMySceneMarginVertical) / MMMySceneCellSize);
         
         _maze = [[MMCoreMaze alloc]initWithRows:numRows andColumns:numCols];
-        _playedWarningSound = NO;
-       
         [self initMazeInScene];
+        
+        // Labels/styling
+        _playedWarningSound = NO;
         
         // Init count down
         _timeLeftLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
@@ -78,8 +81,9 @@ static const CGFloat MMMySceneMarginVertical = 20;
         _scoreLabel.text = [NSString stringWithFormat:@"Levels Completed: %ld", (long)score];
         _scoreLabel.fontSize = 14;
         _scoreLabel.alpha = 1;
-        _scoreLabel.position = CGPointMake(CGRectGetWidth(self.frame)/2, -(CGRectGetHeight(self.frame) - 5));
+        _scoreLabel.position = CGPointMake(CGRectGetWidth(self.frame)/2, - 45);
         [self addChild:_scoreLabel];
+        
     }
     return self;
 }

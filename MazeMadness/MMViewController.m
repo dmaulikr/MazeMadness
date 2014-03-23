@@ -9,12 +9,15 @@
 #import "MMViewController.h"
 #import "MMMyScene.h"
 #import "MMWelcomeScreen.h"
+#import <iAd/iAd.h>
 
 @implementation MMViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // self.canDisplayBannerAds = YES;
 }
 
 -(void)viewWillLayoutSubviews
@@ -24,7 +27,7 @@
     SKView  *view = (SKView*)self.view;
     if(!view.scene){
         // Configure the view.
-        SKView * skView = (SKView *)self.view;
+        SKView * skView = (SKView *)self.originalContentView;
         // skView.showsFPS = YES;
         //skView.showsNodeCount = YES;
         
@@ -32,6 +35,13 @@
         SKScene * scene = [MMWelcomeScreen sceneWithSize:skView.bounds.size];
         scene.scaleMode = SKSceneScaleModeAspectFill;
         
+        // Banner
+        ADBannerView *adView = [[ADBannerView alloc] initWithFrame: CGRectZero];
+        adView.delegate = self;
+        [adView setFrame:CGRectMake(0, skView.bounds.size.height - 50, 320, 50)]; // set to your screen dimensions
+        [skView addSubview:adView];
+        
+       
         // Present the scene.
         [skView presentScene:scene];
     }

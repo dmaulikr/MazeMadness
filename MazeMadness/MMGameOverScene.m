@@ -47,7 +47,7 @@
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    SKScene * mainGameScene = [[MMMyScene alloc]initWithSize:self.view.bounds.size andTimeLimit:15 score:0];
+    SKScene * mainGameScene = [[MMMyScene alloc]initWithSize:self.view.bounds.size andTimeLimit:20 score:0];
     mainGameScene.scaleMode = SKSceneScaleModeAspectFill;
     [self.view presentScene:mainGameScene];
 }

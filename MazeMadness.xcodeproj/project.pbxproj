@@ -14,6 +14,7 @@
 		1D03E6D318DE2F9C00D2F0DE /* beep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1D03E6D218DE2F9C00D2F0DE /* beep.caf */; };
 		1D03E6D518DE30B700D2F0DE /* levelclear.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1D03E6D418DE30B700D2F0DE /* levelclear.caf */; };
 		1D03E6D718DE332500D2F0DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */; };
+		1D03E6D918DE7BD000D2F0DE /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D03E6D818DE7BD000D2F0DE /* iAd.framework */; };
 		1D9F38D418DBDF6500AD839A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D318DBDF6500AD839A /* Foundation.framework */; };
 		1D9F38D618DBDF6500AD839A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */; };
 		1D9F38D818DBDF6500AD839A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9F38D718DBDF6500AD839A /* UIKit.framework */; };
@@ -54,6 +55,7 @@
 		1D03E6D218DE2F9C00D2F0DE /* beep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.caf; sourceTree = "<group>"; };
 		1D03E6D418DE30B700D2F0DE /* levelclear.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = levelclear.caf; sourceTree = "<group>"; };
 		1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1D03E6D818DE7BD000D2F0DE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		1D9F38D018DBDF6500AD839A /* MazeMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9F38D318DBDF6500AD839A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D03E6D918DE7BD000D2F0DE /* iAd.framework in Frameworks */,
 				1D03E6D718DE332500D2F0DE /* AudioToolbox.framework in Frameworks */,
 				1D9F38D618DBDF6500AD839A /* CoreGraphics.framework in Frameworks */,
 				1D9F38D818DBDF6500AD839A /* UIKit.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		1D9F38D218DBDF6500AD839A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D03E6D818DE7BD000D2F0DE /* iAd.framework */,
 				1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */,
 				1D9F38D318DBDF6500AD839A /* Foundation.framework */,
 				1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */,

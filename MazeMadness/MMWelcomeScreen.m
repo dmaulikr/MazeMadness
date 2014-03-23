@@ -19,25 +19,32 @@
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         
-        myLabel.text = @"M A Z E - M A D N E S S";
+        myLabel.text = @"M A Z E";
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame) + 70);
+                                       CGRectGetMidY(self.frame) + 140);
         
         [self addChild:myLabel];
         
+        SKLabelNode *myLabel2 = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        
+        myLabel2.text = @" M A D N E S S";
+        myLabel2.fontSize = 30;
+        myLabel2.position = CGPointMake(CGRectGetMidX(self.frame),
+                                       CGRectGetMidY(self.frame) + 100);
+        
+        [self addChild:myLabel2];
         
         SKLabelNode *prompt = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         prompt.text = @"Drag your finger to the";
-        prompt.fontSize = 20;
+        prompt.fontSize = 18;
         prompt.position = CGPointMake(CGRectGetMidX(self.frame),
                                       CGRectGetMidY(self.frame) + 22);
         [self addChild:prompt];
         
-        
         SKLabelNode *prompt2 = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         prompt2.text = @"finish as fast as possible";
-        prompt2.fontSize = 20;
+        prompt2.fontSize = 18;
         prompt2.position = CGPointMake(CGRectGetMidX(self.frame),
                                       CGRectGetMidY(self.frame));
         [self addChild:prompt2];
