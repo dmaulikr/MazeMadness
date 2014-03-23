@@ -94,7 +94,6 @@ static const CGFloat MMMySceneMarginVertical = 56.35;
     AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain([NSURL fileURLWithPath: soundPath]), &soundID);
     AudioServicesPlaySystemSound (soundID);
     //[soundPath release];
-    // NSLog(@"soundpath retain count: %d", [soundPath retainCount]);
 }
 
 -(void)update:(CFTimeInterval)currentTime {
