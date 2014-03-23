@@ -12,10 +12,10 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <iAd/iAd.h>
 
-static const CGFloat MMMySceneCellSize = 35;
+static const CGFloat MMMySceneCellSize = 40;
 static const CGFloat MMMySceneMarkerSize = 15;
-static const CGFloat MMMySceneMarginHorizontal = 2.5;
-static const CGFloat MMMySceneMarginVertical = 56.35;
+static const CGFloat MMMySceneMarginHorizontal = 20;
+static const CGFloat MMMySceneMarginVertical = 60;
 
 @interface MMMyScene()
 @property MMCoreMaze * maze;
@@ -63,7 +63,7 @@ static const CGFloat MMMySceneMarginVertical = 56.35;
         _maxTime = _timeLeft;
         _timeLeftLabel.text = [NSString stringWithFormat:@"%.2f", _timeLeft];
         _timeLeftLabel.fontSize = 80;
-        _timeLeftLabel.alpha = 0.5;
+        _timeLeftLabel.alpha = 0.4;
         _updateInterval = 0;
         _timeLeftLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
@@ -93,7 +93,8 @@ static const CGFloat MMMySceneMarginVertical = 56.35;
     SystemSoundID soundID;
     AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain([NSURL fileURLWithPath: soundPath]), &soundID);
     AudioServicesPlaySystemSound (soundID);
-    //[soundPath release];
+    // AudioServicesDisposeSystemSoundID(soundID);
+    // [soundPath release];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

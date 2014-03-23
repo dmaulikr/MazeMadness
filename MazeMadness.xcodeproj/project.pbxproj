@@ -56,7 +56,7 @@
 		1D03E6D418DE30B700D2F0DE /* levelclear.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = levelclear.caf; sourceTree = "<group>"; };
 		1D03E6D618DE332500D2F0DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1D03E6D818DE7BD000D2F0DE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		1D9F38D018DBDF6500AD839A /* MazeMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9F38D018DBDF6500AD839A /* Maze Madness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maze Madness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9F38D318DBDF6500AD839A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D9F38D518DBDF6500AD839A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D9F38D718DBDF6500AD839A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -135,7 +135,7 @@
 		1D9F38D118DBDF6500AD839A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D9F38D018DBDF6500AD839A /* MazeMadness.app */,
+				1D9F38D018DBDF6500AD839A /* Maze Madness.app */,
 				1D9F38F818DBDF6500AD839A /* MazeMadnessTests.xctest */,
 			);
 			name = Products;
@@ -210,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D9F38CF18DBDF6500AD839A /* MazeMadness */ = {
+		1D9F38CF18DBDF6500AD839A /* Maze Madness */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D9F390918DBDF6500AD839A /* Build configuration list for PBXNativeTarget "MazeMadness" */;
+			buildConfigurationList = 1D9F390918DBDF6500AD839A /* Build configuration list for PBXNativeTarget "Maze Madness" */;
 			buildPhases = (
 				1D9F38CC18DBDF6500AD839A /* Sources */,
 				1D9F38CD18DBDF6500AD839A /* Frameworks */,
@@ -222,9 +222,9 @@
 			);
 			dependencies = (
 			);
-			name = MazeMadness;
+			name = "Maze Madness";
 			productName = MazeMadness;
-			productReference = 1D9F38D018DBDF6500AD839A /* MazeMadness.app */;
+			productReference = 1D9F38D018DBDF6500AD839A /* Maze Madness.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1D9F38F718DBDF6500AD839A /* MazeMadnessTests */ = {
@@ -255,6 +255,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "David Xiang";
 				TargetAttributes = {
+					1D9F38CF18DBDF6500AD839A = {
+						DevelopmentTeam = NQ8GZFQ3RP;
+					};
 					1D9F38F718DBDF6500AD839A = {
 						TestTargetID = 1D9F38CF18DBDF6500AD839A;
 					};
@@ -273,7 +276,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D9F38CF18DBDF6500AD839A /* MazeMadness */,
+				1D9F38CF18DBDF6500AD839A /* Maze Madness */,
 				1D9F38F718DBDF6500AD839A /* MazeMadnessTests */,
 			);
 		};
@@ -333,7 +336,7 @@
 /* Begin PBXTargetDependency section */
 		1D9F38FE18DBDF6500AD839A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D9F38CF18DBDF6500AD839A /* MazeMadness */;
+			target = 1D9F38CF18DBDF6500AD839A /* Maze Madness */;
 			targetProxy = 1D9F38FD18DBDF6500AD839A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -441,9 +444,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeMadness/MazeMadness-Prefix.pch";
 				INFOPLIST_FILE = "MazeMadness/MazeMadness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -455,9 +460,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeMadness/MazeMadness-Prefix.pch";
 				INFOPLIST_FILE = "MazeMadness/MazeMadness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -516,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D9F390918DBDF6500AD839A /* Build configuration list for PBXNativeTarget "MazeMadness" */ = {
+		1D9F390918DBDF6500AD839A /* Build configuration list for PBXNativeTarget "Maze Madness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D9F390A18DBDF6500AD839A /* Debug */,
